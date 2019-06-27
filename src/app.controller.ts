@@ -6,13 +6,13 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  @Render('home')
+  @Render('hello/home')
   getHello(): { message: string } {
     return this.appService.getHello();
   }
 
   @Get('/message')
-  @Render('message')
+  @Render('message/message')
   getMessage(): { message: string } {
     return this.appService.getMessage();
   }
